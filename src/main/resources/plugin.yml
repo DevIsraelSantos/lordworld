@@ -1,0 +1,18 @@
+name: PluginMinecraftDemo
+version: 1.0.0
+main: br.com.israel.PluginMinecraftDemo
+api-version: "1.21.1"
+author: Israel
+
+commands:
+  ping:
+    description: Teste do plugin
+
+  play:
+    description: Jogo de par ou ímpar
+
+  stats:
+    description: Retorna o saldo do jogo de par ou impar
+
+  scoreboard:
+    description: Ativa ou desativa o scoreboard

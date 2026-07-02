@@ -4,12 +4,12 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
-import br.com.israel.PluginMinecraftDemo;
+import br.com.israel.LordWorld;
 
 public class PlayerJoinListener implements Listener {
-    private final PluginMinecraftDemo plugin;
+    private final LordWorld plugin;
 
-    public static void register(PluginMinecraftDemo plugin) {
+    public static void register(LordWorld plugin) {
         plugin.getServer()
                 .getPluginManager()
                 .registerEvents(
@@ -17,7 +17,7 @@ public class PlayerJoinListener implements Listener {
                         plugin);
     }
 
-    public PlayerJoinListener(PluginMinecraftDemo plugin) {
+    public PlayerJoinListener(LordWorld plugin) {
         this.plugin = plugin;
     }
 

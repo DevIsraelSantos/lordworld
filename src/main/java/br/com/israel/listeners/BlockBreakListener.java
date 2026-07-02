@@ -4,45 +4,45 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 
-import br.com.israel.PluginMinecraftDemo;
+import br.com.israel.LordWorld;
 import br.com.israel.models.PlayerStats;
 
 public class BlockBreakListener
-        implements Listener {
+                implements Listener {
 
-    private final PluginMinecraftDemo plugin;
+        private final LordWorld plugin;
 
-    public BlockBreakListener(
-            PluginMinecraftDemo plugin) {
+        public BlockBreakListener(
+                        LordWorld plugin) {
 
-        this.plugin = plugin;
-    }
-
-    @EventHandler
-    public void onBlockBreak(
-            BlockBreakEvent event) {
-
-        PlayerStats stats = plugin.getPlayerStatsService()
-                .incrementBlocks(
-                        event.getPlayer()
-                                .getUniqueId());
-
-        if (stats.isScoreboardEnabled()) {
-
-            plugin.getScoreboardService()
-                    .update(
-                            event.getPlayer(),
-                            stats.getBlocksBroken());
+                this.plugin = plugin;
         }
-    }
 
-    public static void register(
-            PluginMinecraftDemo plugin) {
+        @EventHandler
+        public void onBlockBreak(
+                        BlockBreakEvent event) {
 
-        plugin.getServer()
-                .getPluginManager()
-                .registerEvents(
-                        new BlockBreakListener(plugin),
-                        plugin);
-    }
+                PlayerStats stats = plugin.getPlayerStatsService()
+                                .incrementBlocks(
+                                                event.getPlayer()
+                                                                .getUniqueId());
+
+                if (stats.isScoreboardEnabled()) {
+
+                        plugin.getScoreboardService()
+                                        .update(
+                                                        event.getPlayer(),
+                                                        stats.getBlocksBroken());
+                }
+        }
+
+        public static void register(
+                        LordWorld plugin) {
+
+                plugin.getServer()
+                                .getPluginManager()
+                                .registerEvents(
+                                                new BlockBreakListener(plugin),
+                                                plugin);
+        }
 }

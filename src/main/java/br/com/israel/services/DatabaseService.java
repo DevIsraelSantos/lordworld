@@ -5,14 +5,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import br.com.israel.PluginMinecraftDemo;
+import br.com.israel.LordWorld;
 
 public class DatabaseService {
 
     private final Connection connection;
 
     public DatabaseService(
-            PluginMinecraftDemo plugin)
+            LordWorld plugin)
             throws SQLException {
 
         File databaseFile = new File(

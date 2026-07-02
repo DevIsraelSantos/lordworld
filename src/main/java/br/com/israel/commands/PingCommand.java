@@ -4,19 +4,19 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-import br.com.israel.PluginMinecraftDemo;
+import br.com.israel.LordWorld;
 
 public class PingCommand implements CommandExecutor {
 
-    private final PluginMinecraftDemo plugin;
+    private final LordWorld plugin;
 
-    public static void register(PluginMinecraftDemo plugin) {
+    public static void register(LordWorld plugin) {
         PingCommand command = new PingCommand(plugin);
 
         plugin.getCommand("ping").setExecutor(command);
     }
 
-    public PingCommand(PluginMinecraftDemo plugin) {
+    public PingCommand(LordWorld plugin) {
         this.plugin = plugin;
     }
 

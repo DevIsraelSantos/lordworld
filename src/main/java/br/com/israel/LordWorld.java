@@ -20,7 +20,7 @@ import br.com.israel.services.ParOuImparService;
 import br.com.israel.services.PlayerStatsService;
 import br.com.israel.services.ScoreboardService;
 
-public class PluginMinecraftDemo extends JavaPlugin {
+public class LordWorld extends JavaPlugin {
     private MessageService messageService;
     private ParOuImparService parOuImparService;
     private EffectService effectService;

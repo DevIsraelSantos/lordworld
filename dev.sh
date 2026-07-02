@@ -47,7 +47,7 @@ echo " COPIANDO PLUGIN"
 echo "========================================"
 echo
 
-cp -f build/libs/plugin-minecraft-demo.jar "$SERVER_DIR/plugins/"
+cp -f build/libs/lord-world.jar "$SERVER_DIR/plugins/"
 
 if [ $? -ne 0 ]; then
     echo

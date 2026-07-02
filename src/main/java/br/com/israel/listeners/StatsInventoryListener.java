@@ -5,21 +5,21 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 
-import br.com.israel.PluginMinecraftDemo;
+import br.com.israel.LordWorld;
 import br.com.israel.inventories.StatsInventory;
 import br.com.israel.models.PlayerStats;
 import net.kyori.adventure.text.Component;
 
 public class StatsInventoryListener implements Listener {
 
-    private final PluginMinecraftDemo plugin;
+    private final LordWorld plugin;
 
-    public StatsInventoryListener(PluginMinecraftDemo plugin) {
+    public StatsInventoryListener(LordWorld plugin) {
 
         this.plugin = plugin;
     }
 
-    public static void register(PluginMinecraftDemo plugin) {
+    public static void register(LordWorld plugin) {
         plugin.getServer().getPluginManager().registerEvents(new StatsInventoryListener(plugin), plugin);
 
     }

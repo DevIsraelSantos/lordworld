@@ -9,7 +9,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 
-import br.com.israel.PluginMinecraftDemo;
+import br.com.israel.LordWorld;
 import br.com.israel.helpers.CommandHelper;
 import br.com.israel.models.ChoiceType;
 import br.com.israel.models.ParOuImparResult;
@@ -18,16 +18,16 @@ import net.kyori.adventure.text.Component;
 
 public class PlayCommand implements CommandExecutor, TabCompleter {
 
-    private final PluginMinecraftDemo plugin;
+    private final LordWorld plugin;
 
-    public static void register(PluginMinecraftDemo plugin) {
+    public static void register(LordWorld plugin) {
         PlayCommand command = new PlayCommand(plugin);
 
         plugin.getCommand("play").setExecutor(command);
         plugin.getCommand("play").setTabCompleter(command);
     }
 
-    public PlayCommand(PluginMinecraftDemo plugin) {
+    public PlayCommand(LordWorld plugin) {
         this.plugin = plugin;
     }
 

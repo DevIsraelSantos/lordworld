@@ -5,7 +5,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import br.com.israel.PluginMinecraftDemo;
+import br.com.israel.LordWorld;
 import br.com.israel.helpers.CommandHelper;
 import br.com.israel.inventories.StatsInventory;
 import br.com.israel.models.PlayerStats;
@@ -13,13 +13,13 @@ import net.kyori.adventure.text.Component;
 
 public class ScoreboardCommand implements CommandExecutor {
 
-    private final PluginMinecraftDemo plugin;
+    private final LordWorld plugin;
 
-    public ScoreboardCommand(PluginMinecraftDemo plugin) {
+    public ScoreboardCommand(LordWorld plugin) {
         this.plugin = plugin;
     }
 
-    public static void register(PluginMinecraftDemo plugin) {
+    public static void register(LordWorld plugin) {
         ScoreboardCommand command = new ScoreboardCommand(plugin);
 
         plugin.getCommand("scoreboard").setExecutor(command);

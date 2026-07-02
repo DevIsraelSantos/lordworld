@@ -15,13 +15,13 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:1.21.8-R0.1-SNAPSHOT")
     implementation("org.xerial:sqlite-jdbc:3.50.3.0")
 }
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(21))
+        languageVersion.set(JavaLanguageVersion.of(25))
     }
 }
 
@@ -30,5 +30,5 @@ tasks.build {
 }
 
 tasks.shadowJar {
-    archiveFileName.set("plugin-minecraft-demo.jar")
+    archiveFileName.set("lord-world.jar")
 }

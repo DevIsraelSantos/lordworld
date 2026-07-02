@@ -4,15 +4,17 @@ main: br.com.israel.LordWorld
 api-version: "26.1.2"
 author: Israel
 
+depend:
+  - Multiverse-Core
+
+softdepend:
+  - FastAsyncWorldEdit
+
 commands:
+  lw:
+    description: LordWorld main command
+    usage: /lw
+    permission: lordworld.command
+
   ping:
     description: Teste do plugin
-
-  play:
-    description: Jogo de par ou ímpar
-
-  stats:
-    description: Retorna o saldo do jogo de par ou impar
-
-  scoreboard:
-    description: Ativa ou desativa o scoreboard

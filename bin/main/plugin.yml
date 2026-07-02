@@ -4,6 +4,12 @@ main: br.com.israel.LordWorld
 api-version: "26.1.2"
 author: Israel
 
+depend:
+  - Multiverse-Core
+
+softdepend:
+  - FastAsyncWorldEdit
+
 commands:
   ping:
     description: Teste do plugin

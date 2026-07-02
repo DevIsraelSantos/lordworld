@@ -16,6 +16,8 @@ repositories {
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.8-R0.1-SNAPSHOT")
+    compileOnly(files("libs/Multiverse-Core.jar"))
+    compileOnly(files("libs/FastAsyncWorldEdit.jar"))
     implementation("org.xerial:sqlite-jdbc:3.50.3.0")
 }
 
